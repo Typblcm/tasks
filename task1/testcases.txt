@@ -1,0 +1,95 @@
+1. Valid Login
+Description: User is able to log in with valid phone number and password.
+1) Open login form
+2) enter valid phone number
+3) enter valid password
+Expected Result: User successfully logged in.
+
+2. Invalid Phone Number Format
+Description: User should not be able to input non digits chars.
+1) Open login form
+2) enter phone number: +260 abcde123
+Expected Result: User should not be able to input non digits chars.
+
+3. Empty Phone Field
+Description: User should see validation error in case phone number field empty and try to log in.
+1) Open login form
+2) do not enter anything in phone number field
+3) enter valid password
+4) click on login button
+Expected Result: "Phone number is required" validation error displayed
+
+4. Empty Password Field
+Description: User should see validation error in case password field empty and attempt login.
+1) Open login form
+2) enter valid phone number
+3) do not enter anything in password field
+Expected Result: 'Password is required' validation error displayed
+
+5. Incorrect Password
+Description: Enter a correct phone number but an incorrect password.
+1) Open login form
+2) enter valid phone number
+3) enter incorrect password
+Expected Result: "The Phone number or password entered is invalid" error message displayed.
+
+6. Login with incorrect phone prefix
+Description: User should sse validation message in case phone number prefix is invalid
+1) Open login form
+2) enter phone number with invalid prefix
+3) enter valid password
+Expected Result: "Mobile provider prefix is not correct." validation error displayed
+
+7. Forgot Password Link
+Description: Click on the "Forgot Password?" link.
+1) Open login form
+2) Click on "Forgot Password?"
+Expected Result: User is redirected to the password recovery page.
+
+8. Login with phone number less than 9 digits
+Description: Enter phone number with less than 9 digits.
+1) Open login form
+2) enter phone number with less than 9 digits.
+3) enter valid password
+Expected Result: "The length should be 9 characters." validation error displayed.
+
+9. Password Visibility Toggle
+Description: Test the password visibility toggle button.
+1) Open login form
+2) enter valid phone number
+3) enter valid password
+4) Click on the eye icon to toggle password visibility
+Expected Result: The password should toggle between hidden (masked) and visible text.
+
+10. Registration Link
+Description: Click on the "Register" link.
+1) Open login form
+2) Click on "Register"
+Expected Result: The user is redirected to the registration page.
+
+11. Login with phone number more than 9 digits
+Description: Enter phone number more than 9 digits
+1) Open login form
+2) enter phone number more than 9 digits
+Expected Result: 10th digit should not be accepted.
+
+Test Case Creation Techniques Used:
+Boundary Value Analysis:
+Used for checking phone number format, empty fields, and length limits (if any).
+Example: Testing phone number with fewer digits or incorrect formatting.
+
+Equivalence Partitioning:
+Group inputs into valid and invalid partitions
+Example: Valid vs. invalid phone numbers, correct vs. incorrect passwords.
+
+Error Guessing:
+Anticipating likely user mistakes, such as entering special characters, invalid country codes, or clicking links.
+Example: Testing with invalid phone formats like +260 abcde123.
+
+State Transition Testing:
+Used for testing transitions, such as after a successful login, redirection to the dashboard, or password reset.
+Example: Clicking on "Forgot Password?" or "Register" links.
+
+Usability Testing:
+Checking user interaction elements, such as the password visibility toggle or button labels.
+Example: Testing the password visibility toggle.
